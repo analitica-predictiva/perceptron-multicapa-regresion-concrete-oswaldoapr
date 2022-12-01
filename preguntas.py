@@ -82,7 +82,7 @@ def pregunta_03():
             ),
             (
                 "mlpregressor",
-                MLPRegressor(),  
+                MLPRegressor(random_state=42),  
             ),
         ],
     )
@@ -129,8 +129,7 @@ def pregunta_04():
         estimator=estimator,
         param_grid=param_grid,
         cv=5,
-        scoring="r2",
-        random_state=42
+        scoring="r2"
     )
 
     return gridsearchcv
